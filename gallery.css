@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f7f7f7;
+  padding: 15px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  
+  color: #222;
+}
+
+.galary{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+
+
+/* Gallery Item */
+.gallery-item,
+.gallery-item1,
+.gallery-item2,
+.gallery-item3 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+ 
+}
+
+.gallery-item img,
+.gallery-item1 img,
+.gallery-item2 img,
+.gallery-item3 img {
+      width: 100%;
+    height: 230px;
+    display: block;
+    transition: transform 0.4s;
+}
+
+
+/* Caption */
+.caption {
+  position: absolute;
+  bottom: 0;
+ font-weight: 700;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+}
+
+/* hover */
+.gallery-item:hover img,
+.gallery-item1:hover img,
+.gallery-item2:hover img,
+.gallery-item3:hover img {
+  transform: scale(1.13);
+}
+
+.gallery-item:hover .caption,
+.gallery-item1:hover .caption,
+.gallery-item2:hover .caption,
+.gallery-item3:hover .caption {
+  opacity: 1;
+  transform: translateY(0);
+  
+}
+
+
+
+
+@media(max-width:768px){
+    .gallery-item3{
+        display: none;
+    }
+    .gallery-item3 img{
+        display: none;
+    }
+    .gallery-item img,
+.gallery-item1 img,
+.gallery-item2 img
+ {
+      width: 100%;
+    height: 200px;
+    display: block;
+    transition: transform 0.4s;
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+ 
+  color: white;
+  width: 90%;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+}
+    
+}
+
+@media(max-width:375px){
+    .gallery-item2{
+        display: none;
+    }
+    .gallery-item3 img{
+        display: none;
+    }
+
+    .gallery-item img,
+.gallery-item1 img
+
+ {
+      width: 100%;
+    height: 180px;
+    display: block;
+    transition: transform 0.4s;
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+ 
+  color: white;
+  width: 80%;
+  text-align: center;
+          padding: 9px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+}
+}
+
