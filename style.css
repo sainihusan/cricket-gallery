@@ -49,7 +49,7 @@ h1 {
       flex-wrap: wrap;
     border: 1px solid;
     border-radius: 10px;
-    transition: transform 0.9s;
+    
 }
 
 
@@ -68,12 +68,7 @@ h1 {
 }
 
 
-.gallery-item:hover img,
-.gallery-item1:hover img,
-.gallery-item2:hover img
- {
-  transform: scale(1.13);
-}
+
 
 .gallery-item:hover .caption,
 .gallery-item1:hover .caption,
@@ -106,7 +101,7 @@ h1 {
       
     height: 200px;
     display: block;
-    transition: transform 0.7s;
+   
 }
 .caption {
   position: absolute;
@@ -134,7 +129,7 @@ h1 {
     height: 125px;
     
     display: block;
-    transition: transform 0.4s;
+    
 }
 .gallery {
     grid-template-columns: repeat(2, 1fr);
