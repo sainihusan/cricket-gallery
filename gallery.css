@@ -20,15 +20,15 @@ h1 {
   color: #222;
 }
 
-.galary{
+.gallery{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
 
 
-/* Gallery Item */
+
 .gallery-item,
 .gallery-item1,
 .gallery-item2,
@@ -45,12 +45,15 @@ h1 {
 .gallery-item3 img {
       width: 100%;
     height: 230px;
-    display: block;
-    transition: transform 0.4s;
+    display: flex;
+      flex-wrap: wrap;
+    border: 1px solid;
+    border-radius: 10px;
+    transition: transform 0.9s;
 }
 
 
-/* Caption */
+
 .caption {
   position: absolute;
   bottom: 0;
@@ -61,21 +64,21 @@ h1 {
   padding: 20px;
   opacity: 0;
   transform: translateY(100%);
-  transition: all 0.4s ease;
+  transition:  1.2s ;
 }
 
-/* hover */
+
 .gallery-item:hover img,
 .gallery-item1:hover img,
-.gallery-item2:hover img,
-.gallery-item3:hover img {
+.gallery-item2:hover img
+ {
   transform: scale(1.13);
 }
 
 .gallery-item:hover .caption,
 .gallery-item1:hover .caption,
-.gallery-item2:hover .caption,
-.gallery-item3:hover .caption {
+.gallery-item2:hover .caption
+ {
   opacity: 1;
   transform: translateY(0);
   
@@ -85,10 +88,14 @@ h1 {
 
 
 @media(max-width:768px){
-    .gallery-item3{
+    .gallery-item2{
         display: none;
     }
-    .gallery-item3 img{
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    
+  }
+    .gallery-item2 img{
         display: none;
     }
     .gallery-item img,
@@ -96,9 +103,10 @@ h1 {
 .gallery-item2 img
  {
       width: 100%;
+      
     height: 200px;
     display: block;
-    transition: transform 0.4s;
+    transition: transform 0.7s;
 }
 .caption {
   position: absolute;
@@ -110,28 +118,27 @@ h1 {
   padding: 20px;
   opacity: 0;
   transform: translateY(100%);
-  transition: all 0.4s ease;
+  transition: all 0.8s ease;
 }
     
 }
 
 @media(max-width:375px){
-    .gallery-item2{
-        display: none;
-    }
-    .gallery-item3 img{
-        display: none;
-    }
+   
 
     .gallery-item img,
 .gallery-item1 img
 
  {
       width: 100%;
-    height: 180px;
+    height: 125px;
+    
     display: block;
     transition: transform 0.4s;
 }
+.gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 .caption {
   position: absolute;
   bottom: 0;
@@ -142,7 +149,7 @@ h1 {
           padding: 9px;
   opacity: 0;
   transform: translateY(100%);
-  transition: all 0.4s ease;
+  transition:  0.5s ;
 }
 }
 
