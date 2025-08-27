@@ -72,7 +72,7 @@ h1 {
 .gallery-item1:hover img,
 .gallery-item2:hover img
  {
-  transform: scale(1.13);
+  transform: scale(0.5);
 }
 
 .gallery-item:hover .caption,
