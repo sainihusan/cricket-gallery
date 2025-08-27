@@ -34,7 +34,7 @@ h1 {
 .gallery-item2,
 .gallery-item3 {
   position: relative;
-  overflow: hidden;
+  
   border-radius: 10px;
  
 }
@@ -45,8 +45,7 @@ h1 {
 .gallery-item3 img {
       width: 100%;
     height: 230px;
-    display: flex;
-      flex-wrap: wrap;
+    
     border: 1px solid;
     border-radius: 10px;
     
